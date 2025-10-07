@@ -3,13 +3,15 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/kode.jpg";
+import { useAuth } from "../contexts/AuthProvider";
 
 export default function Login() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL;
+  const { login } = useAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,8 +21,9 @@ export default function Login() {
         username,
         password,
       });
-      localStorage.setItem("token", res.data.token);
-      navigate("/welcome");
+      //   localStorage.setItem("token", res.data.token);
+      login(res.data.token); // actualiza contexto y localStorage
+      navigate("/", { replace: true });
     } catch (err) {
       setError("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
     }
