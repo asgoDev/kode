@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-barber-blue:  #0A2540; 
+  --color-barber-gold: #D4AF37 ; 
+  --color-barber-cream: #F5F5DC; 
+  --color-error-red: #DC2626; 
+
+
+  --color-dark-gray: #000000;
+  --color-gray-button: #141414;
+  --color-muted: #333;
+  --color-border-focus: #ddd;
+  --color-white-md: #aaa;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Para Firefox */
+    appearance: none; /* Estándar futuro, por si acaso */
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+/* body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='160' font-weight='bolder' fill='%23888888' opacity='0.05' transform='rotate(0, 100, 50)'>Kode.</text></svg>");
+    background-repeat: repeat;
+    background-size: 400px 100px;
+}
+
+body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='200' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='160' font-weight='bolder' fill='%23888888' opacity='0.05' transform='rotate(-20, 100, 50)'>Kode.</text></svg>");
+    background-repeat: repeat;
+    background-size: 400px 100px;
+} */
