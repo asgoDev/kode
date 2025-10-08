@@ -1,5 +1,5 @@
 // src/pages/Login.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/kode.jpg";
@@ -11,7 +11,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, isAuth } = useAuth();
+
+  useEffect(() => {
+    if (isAuth) navigate("/", { replace: true });
+  }, [isAuth, navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -31,7 +35,7 @@ export default function Login() {
 
   return (
     <>
-      <div className="flex-1 flex flex-col justify-center items-center p-4">
+      <div className="flex-1 flex flex-col justify-center items-center p-6">
         <header className="flex justify-center mb-4">
           <img className="w-1/2 mix-blend-screen" src={Logo} alt="Kode logo" />
         </header>

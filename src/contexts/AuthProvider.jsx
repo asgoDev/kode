@@ -1,13 +1,15 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [token, setToken] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const savedToken = localStorage.getItem("token");
-    if (savedToken) setToken(savedToken);
+    const saved = localStorage.getItem("token");
+    if (saved) setToken(saved);
+    setLoading(false);
   }, []);
 
   const login = (newToken) => {
@@ -21,7 +23,9 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ token, login, logout, isAuth: !!token }}>
+    <AuthContext.Provider
+      value={{ token, isAuth: !!token, login, logout, loading }}
+    >
       {children}
     </AuthContext.Provider>
   );
