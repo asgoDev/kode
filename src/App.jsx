@@ -6,6 +6,7 @@ import Barberos from "./pages/Barberos";
 import ProtectedRoute from "./components/ProtectedRoute";
 import BodyLayout from "./layouts/BodyLayout";
 import LoggedLayout from "./layouts/LoggedLayout";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="reportes" element={<Reportes />} />
             <Route path="barberos" element={<Barberos />} />
+            <Route path="configuracion" element={<Settings />} />
           </Route>
 
           {/* fallback */}
