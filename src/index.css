@@ -15,6 +15,13 @@
   --color-muted: #333;
   --color-border-focus: #ddd;
   --color-white-md: #aaa;
+
+  
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(-6); }
+  50% { transform: translateY(-6px); } /* ajusta el -6px según qué tan sutil quieras */
 }
 
 input[type="number"]::-webkit-outer-spin-button,

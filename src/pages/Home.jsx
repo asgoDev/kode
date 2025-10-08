@@ -2,9 +2,9 @@ import { CirclePlus, NotebookText, Users } from "lucide-react";
 export default function Home() {
   return (
     <div className="text-white-md grid grid-rows-[auto_1fr_auto]">
-      <p className="text-muted translate-x-0 translate-y-3">Bienvenido, rey.</p>
+      <p className="text-muted translate-x-0 translate-y-0">Bienvenido, rey.</p>
       <section className="grid place-items-center ">
-        <div className="text-center">
+        <div className="text-center animate-[float_3s_ease-in-out_infinite]">
           <span className="text-[10px] text-muted font-bold uppercase tracking-widest translate-y-[10px]">
             Ingresos del día
           </span>
