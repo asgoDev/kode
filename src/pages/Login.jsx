@@ -36,8 +36,8 @@ export default function Login() {
   return (
     <>
       <div className="flex-1 flex flex-col justify-center items-center p-6">
-        <header className="flex justify-center mb-4">
-          <img className="w-1/2 mix-blend-screen" src={Logo} alt="Kode logo" />
+        <header className=" mb-4">
+          <img className="w-48 mix-blend-screen " src={Logo} alt="Kode logo" />
         </header>
         <div className="p-8 w-full max-w-sm">
           <p className="text-center uppercase text-sm font-[100] text-white-md  tracking-widest">
